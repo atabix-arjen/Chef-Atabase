@@ -1,7 +1,7 @@
 server {
     listen 80 default_server;
 
-    root /var/www/laravel/public;
+    root /var/www/production/public;
     index index.php;
 
     location / {
