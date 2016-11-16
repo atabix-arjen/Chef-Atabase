@@ -10,7 +10,7 @@ script "Install PHP7.0" do
       sed -i "/listen = .*/c\listen = [::]:9000" /etc/php/7.0/fpm/pool.d/www.conf
       service php7.0-fpm restart
       composer global require "laravel/installer"
-      (cd /var/www/ && ~/.composer/vendor/bin/laravel new production)
+      (cd /var/www/ && ~/.composer/vendor/bin/laravel new production && chown www-data:www-data -R production)
   EOH
 end
 
