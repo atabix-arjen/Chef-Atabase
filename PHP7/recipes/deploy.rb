@@ -1,6 +1,6 @@
 script "Install Laravel" do
   interpreter "bash"
-  user 'www-data'
+  user 'root'
   code <<-EOH
       (cd /var/www/ && composer create-project --prefer-dist laravel/laravel production && chown www-data:www-data -R production)
   EOH
