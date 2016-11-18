@@ -1,7 +1,7 @@
 server {
     listen 80 default_server;
 
-    root /opt/aws/opsworks/current;
+    root /srv/www/laravel/current/public;
     index index.php;
 
     location / {
