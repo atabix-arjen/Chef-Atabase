@@ -1,7 +1,7 @@
 server {
     listen 80 default_server;
 
-    root /var/www/production/public;
+    root /opt/aws/opsworks/current;
     index index.php;
 
     location / {
