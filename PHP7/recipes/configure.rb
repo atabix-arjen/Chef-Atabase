@@ -1,4 +1,8 @@
 node[:deploy].each do |application, deploy|
+  if deploy[:application_type] != 'web'
+    Chef::Log.debug("Skipping configure #{application} as it is not an PHP app")
+    next
+  end
 
   # write out opsworks.php
   template "#{deploy[:deploy_to]}/shared/config/opsworks.php" do
