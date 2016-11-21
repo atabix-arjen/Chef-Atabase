@@ -1,5 +1,5 @@
 node[:deploy].each do |application, deploy|
-  if deploy[:application_type] != 'web'
+  if deploy[:application_type] != 'nginx'
     Chef::Log.debug("Skipping configure #{application} as it is not an PHP app")
     next
   end
